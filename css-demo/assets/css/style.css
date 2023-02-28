@@ -1,0 +1,223 @@
+/* Color Theme Swatches in Hex */
+.My-Color-Theme-1-hex {
+    color: #5CA825;
+}
+
+.My-Color-Theme-2-hex {
+    color: #7FF52A;
+}
+
+.My-Color-Theme-3-hex {
+    color: #F51E34;
+}
+
+.My-Color-Theme-4-hex {
+    color: #03A886;
+}
+
+.My-Color-Theme-5-hex {
+    color: #11F5C6;
+}
+
+/* Color Theme Swatches in RGBA */
+.My-Color-Theme-1-rgba {
+    color: rgba(92, 168, 37, 1);
+}
+
+.My-Color-Theme-2-rgba {
+    color: rgba(127, 245, 42, 1);
+}
+
+.My-Color-Theme-3-rgba {
+    color: rgba(245, 30, 52, 1);
+}
+
+.My-Color-Theme-4-rgba {
+    color: rgba(3, 168, 134, 1);
+}
+
+.My-Color-Theme-5-rgba {
+    color: rgba(17, 245, 198, 1);
+}
+
+/* Color Theme Swatches in HSLA */
+.My-Color-Theme-1-hsla {
+    color: hsla(94, 63, 40, 1);
+}
+
+.My-Color-Theme-2-hsla {
+    color: hsla(94, 91, 56, 1);
+}
+
+.My-Color-Theme-3-hsla {
+    color: hsla(353, 91, 53, 1);
+}
+
+.My-Color-Theme-4-hsla {
+    color: hsla(167, 96, 33, 1);
+}
+
+.My-Color-Theme-5-hsla {
+    color: hsla(167, 91, 51, 1);
+}
+
+/* ---------------Box Sizing----------------- */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+/* ---------------Utility Classes----------------- */
+
+.container{
+    margin: auto;
+    padding:45px;
+}
+img {
+    max-width: 100%;
+}
+.img-right{
+    float: right;
+    border:2px solid #03A886;
+    padding: 6px;
+    border-radius: 12px;
+    max-width: 50%;
+    margin:15px 0 15px 15px;
+}
+body {
+    background-color: #7FF52A;
+    color: white;
+    font-family: 'Trispace', sans-serif;
+}
+
+main {
+
+    background-color: #F51E34;
+    width: 80vw;
+    max-width: 1200px;
+    margin: 40px auto;
+    border: 5px solid black;
+    border-radius: 15px;
+}
+
+header.primary{
+    background-color: #5CA825;
+    padding:20px;
+    background-image: url(../img/toucan.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display:flex;
+}
+header.primary .hgroup{
+width: 70%;
+}
+
+header.primary nav{
+    width:30%;
+}
+
+.hgroup h1 a{
+    color: #11F5C6;
+    font-size: 2.8rem;
+    text-decoration: none;
+}
+
+.hgroup h2{
+    color: burlywood;
+    font-size: 2.0rem;
+}
+
+header.primary nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+header.primary nav ul li a{
+    display: block;
+    background-color: #5CA825;
+    color: aliceblue;
+    padding: 10px 10px 10px 0;
+    border: 1px solid #000000;
+    border-radius: 25px;
+    text-decoration: none;
+    text-align: center;
+    transition: .90;
+    margin-bottom: 30px;
+}
+header.primary nav ul li a:hover{
+    text-decoration: underline;
+   
+}
+#content{
+    line-height: 1.6;
+}
+
+#content h2, #content h3{
+    color: #11F5C6;
+}
+
+#blog {
+    background: linear-gradient(90deg, rgba(245,30,52,1) 35%, rgba(44,255,0,1) 100%);
+}
+
+#blog > h2{
+    color: #03A886;
+}
+
+#blog article.post{
+background: #03A886;
+margin: 20px;
+padding: 20px;
+}
+
+#blog figure{
+    margin:0;
+}
+
+article.post{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 10px;
+    grid-template-areas: "figure date"
+    "figure content" "figure footer";
+}
+
+figure{
+    grid-area: figure;
+}
+
+#blog header{
+    grid-area: date;
+}
+
+#blog .post-content{
+    grid-area: content;
+}
+#blog footer{
+    grid-area: footer;
+}
+
+aside .container {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "widget article";
+    
+}
+
+aside article.widget:nth-child(1){
+    grid-area: widget;
+    padding-right: 30px;
+}
+aside article.widget:nth-child(2){
+    grid-area: article;
+    border-left: 1px solid #000000;
+    padding-left: 30px;
+}

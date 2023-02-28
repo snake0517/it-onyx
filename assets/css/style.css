@@ -1,0 +1,45 @@
+body {
+    background-color: aquamarine;
+    font-family: 'Trispace', sans-serif;
+}
+
+main{
+    background-color: cadetblue;
+}
+.container{
+    margin: auto;
+    padding:45px;
+}
+img {
+    max-width: 100%;
+}
+.img-right{
+    float: right;
+    border:2px solid #03A886;
+    padding: 6px;
+    border-radius: 12px;
+    max-width: 50%;
+    margin:15px 0 15px 15px;
+}
+
+header.primary{
+    background-image: url(../img/pattern1.jpg);
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    
+}
+header.primary nav ul li a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+
+    
+}
+header.primary nav ul li a:hover{
+    text-decoration: underline;
+   
+}
+h1{
+    text-align: center;
+}
