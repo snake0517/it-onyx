@@ -49,30 +49,20 @@
                 data-msg-required="To Date is Required">
             <label id="ToDateError" for="ToDate" class="error"></label>
             <br><br>
-            <input type="button" value="ShowResults" id="ShowResults" name="ShowResults" onclick="GetStock();">
+            <input type="button" value="ShowResults" id="ShowResults" name="ShowResults" onclick="ShowResults();">
             <input type="button" value="Clear" id="Clear" name="Clear" onclick="ClearForm();">
             <hr>
             <br>
            
             
 
-            <div class="clearfix">
-                <div class="img-container">
-                    <span id="StockValueTable"></span>
-                </div>
-                <div class="img-container">
-                    <span id="StockVolumeTable"></span>
-                </div>
-            </div>
-            <hr>
+            
 
             <div class="clearfix">
                 <div class="img-container">
                     <canvas id="chartjs-0" width="400" height="400"></canvas>
                 </div>
-                <div class="img-container">
-                    <canvas id="chartjs-1" width="400" height="400"></canvas>
-                </div>
+                
             </div>
         </div>
     </form>
