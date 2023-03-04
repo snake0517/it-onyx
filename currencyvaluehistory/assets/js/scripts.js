@@ -20,7 +20,7 @@ async function ShowResults() {
             
  
         /* URL for AJAX Call */
-        var myURL2 = "https://api.polygon.io/v2/aggs/ticker/" + "C:" + BaseCurrency + ConvertCurrency + "/range/1/day/" + FromDate + "/" + ToDate + "?apiKey=" + apiKey;
+        var myURL2 = "https://api.polygon.io/v2/aggs/ticker/C:"  + BaseCurrency + ConvertCurrency + "/range/1/day/" + FromDate + "/" + ToDate + "?apiKey=" + apiKey;
         /* Make the AJAX call */
         var msg2Object = await fetch(myURL2);
         /* Check the status */
@@ -33,15 +33,15 @@ async function ShowResults() {
                 /* Your code to process the result goes here  
                     display the returned message */
                 var currencydate = [];
-                var stockvalue = [];
-                var stockvolume = [];
+                var currencyvalue = [];
+                
                 var numdays = msg2.results.length;
                 if (numdays > 0) {
                     for (var i = 0; i < numdays; i++) {
                         /* stock close value */
-                        stockvalue[i] = msg2.results[i].c;
+                        currencyvalue[i] = msg2.results[i].c;
                         /* stock volume */
-                        stockvolume[i] = msg2.results[i].v;
+                        
                         /* date is in Unix milleseconds - create a temporary date variable */
                         var tempdate = new Date(msg2.results[i].t);
                         /* extract the date string from the value */
@@ -55,9 +55,9 @@ async function ShowResults() {
                 var myChart = new Chart(ctx0, {
                     "type":"line",
                     "data": {
-                        "labels": stockdate,
+                        "labels": currencydate,
                         "datasets":[{"label":"Stock Close",
-                        "data": stockvalue,
+                        "data": currencyvalue,
                         "fill":false,
                         "borderColor":"rgb(75, 192, 192)",
                         "lineTension":0.1}]},
@@ -80,12 +80,13 @@ async function ShowResults() {
 }
 
 function ClearForm() {
-    
+    document.getElementById("BaseCurrency").value = "";
+    document.getElementById("ConvertCurrency").value = "";
     document.getElementById("FromDate").value = "";
     document.getElementById("ToDate").value = "";
     
     document.getElementById("StockValueTable").innerHTML = "";
-    document.getElementById("StockVolumeTable").innerHTML = "";
+    
     
     /* Ugly Code to Erase Canvas */
     var canvas0 = document.getElementById("chartjs-0");
