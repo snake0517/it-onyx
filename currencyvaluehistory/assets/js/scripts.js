@@ -1,4 +1,4 @@
-async function ShowResults() {
+async function Results() {
     "use strict";
 
     // Get a reference to the form - Use the ID of the form
@@ -56,7 +56,7 @@ async function ShowResults() {
                     "type":"line",
                     "data": {
                         "labels": currencydate,
-                        "datasets":[{"label":"Stock Close",
+                        "datasets":[{"label":"Currency Close",
                         "data": currencyvalue,
                         "fill":false,
                         "borderColor":"rgb(75, 192, 192)",
