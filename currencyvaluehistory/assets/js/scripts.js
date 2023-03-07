@@ -20,7 +20,7 @@ async function ShowResults() {
             
  
         /* URL for AJAX Call */
-        var myURL2 = "https://api.polygon.io/v2/aggs/ticker/C:"  + BaseCurrency + ConvertCurrency + "/range/1/day/" + FromDate + "/" + ToDate + "?apiKey=" + apiKey;
+        var myURL2 = "https://api.polygon.io/v2/aggs/ticker/C:"  + BaseCurrency + ConvertCurrency + "/range/1/day/" + FromDate + "/" + ToDate + "?adjusted=true&sort=asc&limit=32&apiKey=" + apiKey;
         /* Make the AJAX call */
         var msg2Object = await fetch(myURL2);
         /* Check the status */
