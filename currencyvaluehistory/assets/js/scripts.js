@@ -85,8 +85,8 @@ function ClearForm() {
     document.getElementById("FromDate").value = "";
     document.getElementById("ToDate").value = "";
     
-    document.getElementById("StockValueTable").innerHTML = "";
-    
+    document.getElementById("ToDateError").innerHTML = "";
+    document.getElementById("FromDateError").innerHTML = "";
     
     /* Ugly Code to Erase Canvas */
     var canvas0 = document.getElementById("chartjs-0");
