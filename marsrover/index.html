@@ -45,10 +45,10 @@
 
 
     <label>Rover: </label>
-    <label for="Curiosity"><input type="radio" name="rover" id="Curiosity" value="Curiosity" data-rule-required="true"
+    <label for="Curiosity"><input type="radio" onchange="getCuriosity()" name="rover" id="Curiosity" value="Curiosity" data-rule-required="true"
             data-msg-required="Rover is Required" />Curiosity</label>
-    <label for="Opportunity"><input type="radio" name="rover" id="Opportunity" value="Opportunity">Opportunity</label>
-    <label for="Spirit"><input type="radio" name="rover" id="Spirit" value="Spirit">Spirit</label>
+    <label for="Opportunity"><input type="radio"  onchange="getOpportunity()" name="rover" id="Opportunity" value="Opportunity">Opportunity</label>
+    <label for="Spirit"><input type="radio"  onchange="getSpirit()" name="rover" id="Spirit" value="Spirit">Spirit</label>
 
     <label for="rover" class="error"></label>
     <br>
@@ -57,6 +57,34 @@
     <input type="date" name="PicDate" id="PicDate" data-rule-required="true"
         data-msg-required="Picture Date is Required">
     <label id="PicDateError" for="PicDate" class="error"></label>
+
+    <div class="gallery">
+        <a id="rover1" href="#"><img id="mars1" src=""></a>
+        <a id="rover2" href="#"><img id="mars2" src=""></a>
+        <a id="rover3" href="#"><img id="mars3" src=""></a>
+        <a id="rover4" href="#"><img id="mars4" src=""></a>
+        <a id="rover5" href="#"><img id="mars5" src=""></a>
+        <a id="rover6" href="#"><img id="mars6" src=""></a>
+        <a id="rover7" href="#"><img id="mars7" src=""></a>
+        <a id="rover8" href="#"><img id="mars8" src=""></a>
+        <a id="rover9" href="#"><img id="mars9" src=""></a>
+        <a id="rover10" href="#"><img id="mars10" src=""></a>
+        <a id="rover11" href="#"><img id="mars11" src=""></a>
+        <a id="rover12" href="#"><img id="mars12" src=""></a>
+        <a id="rover13" href="#"><img id="mars13" src=""></a>
+        <a id="rover14" href="#"><img id="mars14" src=""></a>
+        <a id="rover15" href="#"><img id="mars15" src=""></a>
+        <a id="rover16" href="#"><img id="mars16" src=""></a>
+        <a id="rover17" href="#"><img id="mars17" src=""></a>
+        <a id="rover18" href="#"><img id="mars18" src=""></a>
+        <a id="rover19" href="#"><img id="mars19" src=""></a>
+        <a id="rover20" href="#"><img id="mars20" src=""></a>
+        <a id="rover21" href="#"><img id="mars21" src=""></a>
+        <a id="rover22" href="#"><img id="mars22" src=""></a>
+        <a id="rover23" href="#"><img id="mars23" src=""></a>
+        <a id="rover24" href="#"><img id="mars24" src=""></a>
+        <a id="rover25" href="#"><img id="mars25" src=""></a>
+      </div>
 
     <br><br>
     <input type="button" value="Search" id="Search" name="Search" onclick="GoSearch();">
