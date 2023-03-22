@@ -40,3 +40,9 @@ tr:nth-child(even) {
   clear: both;
   display: table;
 }
+
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
