@@ -10,8 +10,8 @@ async function GoSearch() {
     // If all of the form elements are valid, the get the form values
     if (form.valid()) {
         
-        var photoDate = document.getElementById("photoDate").value;
-        var apiKey = "SEhoXqBiy5mxt8RJbbHJXbqshoIpQVUb6FcXuOVP";
+        var photoDate = document.getElementById("PicDate").value;
+        var apiKey = "5YsKTo6bD3QOoi8sA3g4Hxzl6D2IXfzdiof3vMNk";
 
         var roverChoice;
         if (document.getElementById("Curiosity").checked) {
@@ -68,9 +68,9 @@ function clearform() {
         document.getElementById("Curiosity").checked = false;
         document.getElementById("Opportunity").checked = false;
         document.getElementById("Spirit").checked = false;
-        document.getElementById("photoDate").value = "";
+        document.getElementById("PickDate").value = "";
         document.getElementById("roverError").innerHTML = "";
-        document.getElementById("photoDateError").innerHTML = "";
+        document.getElementById("PicDateError").innerHTML = "";
         document.getElementById("rover1" + i).src = "#";
         document.getElementById("anchor" + i).href = "";
         document.getElementById("mars1" + i).title = "";
@@ -80,13 +80,13 @@ function clearform() {
 }
 
 function getCuriosity() {
-    document.getElementById("photoDate").value = "2012-08-06";
+    document.getElementById("PicDate").value = "2012-08-06";
 }
 
 function getOpportunity() {
-    document.getElementById("photoDate").value = "2004-01-26";
+    document.getElementById("PicDate").value = "2004-01-26";
 }
 
 function getSpirit() {
-    document.getElementById("photoDate").value = "2004-01-05";
+    document.getElementById("PicDate").value = "2004-01-05";
 }
