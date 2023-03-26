@@ -25,58 +25,11 @@ async function GoSearch() {
         }
 
         var myURL = "https://api.nasa.gov/mars-photos/api/v1/rovers/" + roverChoice + "/photos?earth_date=" + photoDate + "&page=1&api_key=" + apiKey;
-        var myMethod = "GET";
-
-        $(document).ready(function () {
-
-            $.ajax({
-                method: myMethod,
-                url: myURL
-            })
-
-                .done(function (msg) {
-
-                    var numphotos = msg.photos.length;
-                    if (numphotos > 0) {
-                        for (var i = 0; i < 25; i++) {
-                            if (i < numphotos) {
-                                document.getElementById("mars1" + i).src = msg.photos[i].img_src;
-                                document.getElementById("mars1" + i).title = msg.photos[i].camera.full_name;
-                                document.getElementById("rover1" + i).href = msg.photos[i].img_src;
-                                document.getElementById("text1").innerHTML = msg.photos.length + " photos found";
-                                document.getElementById("text2").innerHTML = "Click a photo to display full size";
-                            }
-
-                            else {
-                                document.getElementById("rover1" + i).src = "#";
-                                document.getElementById("anchor" + i).href = "#";
-                                document.getElementById("mars1" + i).style.display = "none";
-                            }
-                        }
-                    }
-                })
-
-                .fail(function (msg) {
-                    alert("Rover Not Found - Status: " + msg.status);
-                });
-        });
+ 
     }
 }
-
 function clearform() {
-    for (var i = 0; i < 25; i++) {
-        document.getElementById("Curiosity").checked = false;
-        document.getElementById("Opportunity").checked = false;
-        document.getElementById("Spirit").checked = false;
-        document.getElementById("PickDate").value = "";
-        document.getElementById("roverError").innerHTML = "";
-        document.getElementById("PicDateError").innerHTML = "";
-        document.getElementById("rover1" + i).src = "#";
-        document.getElementById("anchor" + i).href = "";
-        document.getElementById("mars1" + i).title = "";
-        document.getElementById("text1").innerHTML = "";
-        document.getElementById("text2").innerHTML = "";
-    }
+    
 }
 
 function getCuriosity() {
