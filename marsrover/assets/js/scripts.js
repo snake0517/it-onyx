@@ -1,4 +1,6 @@
-function GoSearch() {
+ async function GoSearch() {
+
+    
     // Get selected rover and date
     let rover = $('input[name="rover"]:checked').val();
     let date = $('#PicDate').val();
@@ -84,17 +86,10 @@ function getSpirit() {
   document.getElementById('PicDate').min = '2004-01-05';
   document.getElementById('PicDate').max = '2004-03-21';
 }
-/*
-  // Function to shuffle array
-  function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-  }
-  */
-  // Function to handle form submission
+
+ 
+  
+  
  
   
   // Function to clear form
