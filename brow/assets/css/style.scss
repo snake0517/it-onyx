@@ -1,0 +1,139 @@
+$Gabby-1-hex: #7EB37B;
+$Gabby-2-hex: #9484F5;
+$Gabby-3-hex: #5BFA52;
+$Gabby-4-hex: #FAA86E;
+$Gabby-5-hex: #B3937D;
+
+/* Color Theme Swatches in RGBA */
+$Gabby-1-rgba: rgba(126, 179, 123, 1);
+$Gabby-2-rgba: rgba(148, 132, 245, 1);
+$Gabby-3-rgba: rgba(91, 250, 82, 1);
+$Gabby-4-rgba: rgba(250, 168, 110, 1);
+$Gabby-5-rgba: rgba(179, 147, 125, 1);
+
+/* Color Theme Swatches in HSLA */
+$Gabby-1-hsla: hsla(116, 26, 59, 1);
+$Gabby-2-hsla: hsla(248, 84, 73, 1);
+$Gabby-3-hsla: hsla(116, 94, 65, 1);
+$Gabby-4-hsla: hsla(24, 93, 70, 1);
+$Gabby-5-hsla: hsla(24, 26, 59, 1);
+
+html {
+box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+box-sizing: inherit;
+}
+
+.container {
+width: 80vw;
+margin: 40px auto;
+max-width: 900px;
+}
+
+.img-right {
+float: right;
+margin: 10px 0 10px 20px;
+border: 1px solid #c0c0c0;
+padding: 5px;
+}
+
+.img-left {
+float: left;
+margin: 10px 20px 10px 0;
+border: 1px solid #c0c0c0;
+padding: 5px;
+}
+
+.img-center {
+display: block;
+margin: 20px auto;
+border: 1px solid #c0c0c0;
+padding: 5px;
+}
+
+
+
+.content {
+display: grid;
+grid-template-columns: repeat(2,1fr);
+gap: 20px;
+}
+
+img {
+max-width: 100%;
+height: auto;
+display: block;
+margin: auto;
+}
+
+body {
+font-family: 'Maven Pro', sans-serif;
+background-color: $Gabby-4-hex;
+color: white;
+font-size: 1.8rem;
+}
+
+header.primary {
+text-align: center;
+}
+
+nav {
+height: 5%;
+background-color: $Gabby-2-hex;
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+
+.primary-heading {
+font-family: 'Great Vibes', cursive;
+text-align: center;
+font-size: 4rem;
+}
+
+.nav-links {
+padding: 28px 0;
+}
+
+.nav-links li {
+display: inline-block;
+margin: 0 15px;
+}
+
+.nav-links li a {
+text-decoration: none;
+color: white;
+padding: 5px 0;
+}
+
+footer {
+display: flex;
+align-items: center;
+justify-content: space-between;
+height: 5%;
+background-color: $Gabby-2-hex;
+}
+
+.sub-heading {
+font-size: 2.9rem;
+  
+}
+
+footer ul {
+  padding: 28px 0;
+}
+
+footer ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 0;
+}
