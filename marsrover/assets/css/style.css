@@ -45,8 +45,12 @@ tr:nth-child(even) {
   display: table;
 }
 
-.imageContainer{
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
+#galleryContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+img{
+  width: 250px;
+  padding: 5px;
 }
