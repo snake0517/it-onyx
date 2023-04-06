@@ -1,10 +1,40 @@
  async function calculate() {
 /* URL for AJAX Call */
-var myURL2 = "https://waterservices.usgs.gov/nwis/iv/?format=json&indent=on&sites=07055660,%2007055646,%2007055780,%2007055680&period=P7D&parameterCd=00065&siteStatus=all"
+var myURL = "https://waterservices.usgs.gov/nwis/iv/?format=json&indent=on&sites=07055660,%2007055646,%2007055780,%2007055680&period=P7D&parameterCd=00065&siteStatus=all"
 /* Make the AJAX call */
-var msg2Object = await fetch(myURL2);
+var msgObject = await fetch(myURL);
 /* Check the status */
-var msg2JSONText = await msg2Object.text();
+var msgJSONText = await msgObject.text();
 
-var msg2 = JSON.parse(msg2JSONText);
+var msg = JSON.parse(msgJSONText);
+
+/* Site 0 */
+var dates = [];
+var values = [];
+/* fLen contains the length of the array (number of values) */
+fLen = msg.value.timeSeries[0].values[0].value.length
+for (i = 0; i < fLen; i++) {
+    values[i] = msg.value.timeSeries[0].values[0].value[i].value
+	dates[i] = msg.value.timeSeries[0].values[0].value[i].dateTime
+}
+var sitename = msg.value.timeSeries[0].sourceInfo.siteName
+var sitecode = msg.value.timeSeries[0].sourceInfo.siteCode[0].value
+var siteDescription = msg.value.timeSeries[0].variable.variableDescription
+
+var ctx = document.getElementById("chartjs-0");
+
+var myChart = new Chart(ctx, {
+    "type":"line",
+    "data": {
+        "labels": dates,
+        "datasets":[{
+            "data": values,
+            fill: false
+        }]
+    },
+    "options":{ 
+        responsive: false,
+        maintainAspectRatio: true,
+    }
+});
 }
