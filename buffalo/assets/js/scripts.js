@@ -22,24 +22,45 @@ var sitecode = msg.value.timeSeries[0].sourceInfo.siteCode[0].value
 var siteDescription = msg.value.timeSeries[0].variable.variableDescription
 
 var ctx = document.getElementById("chartjs-0");
-
 var myChart = new Chart(ctx, {
     "type":"line",
     "data": {
         "labels": dates,
-        "datasets":[{
-            "data": values,
-            fill: false
-        }]
-    },
-    "options":{ 
-        
-        responsive: false,
-        maintainAspectRatio: true,
-        
+        "datasets":[{"label":"Gauge Height",
+        "data": values,
+        "fill":false,
+        "borderColor":"rgb(75, 192, 192)",
+        "lineTension":0.1}]},
+        "options":{
+            responsive: false,
+            maintainAspectRatio: true,
+            title: {
+                display: true,
+                text: sitename + ' - PID: ' + sitecode,
+                fontSize : 18
+            },
+            scales: {
+                xAxes: [{
+                    type: 'time',
+                    time: {
+                         displayFormats: {
+                            day: 'MMM D'
+                        }
+                    }
+                }],
+
+                yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: siteDescription
+                    }
+                }]
+
+            }
+        }
     }
-});
- 
+);
+
 
 /* Site 1 */
 var dates = [];
