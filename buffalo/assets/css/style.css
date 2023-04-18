@@ -10,6 +10,11 @@ body {
     text-align: center;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 h1 {
     font-family: 'Acme', sans-serif;
 }
@@ -28,9 +33,28 @@ h3 {
   color: #D9A13B;
 }
 
+.button {
+  background-color: #D9A13B;
+  padding: 10px;
+  border: none;
+}
+
+.button:hover{
+  background-color: #ffaa0d;
+}
+
 .image-container {
   width: 100%;
+  position: relative;
+  display: inline;
+  color: #F2ECD8;
+  text-shadow: rgb(0, 0, 0) 1px 0 10px;
 }
+
+.image-container h2 {
+  color: #F2ECD8;
+}
+
 
 .half-image {
   border-radius: 2%;
@@ -100,6 +124,18 @@ footer {
   footer ul li {
     margin-bottom: 10px;
   }
+
+  footer ul li a {
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #F2ECD8;
+  }
+
+  footer ul li a:hover{
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #D9A13B;
+  }
   
   .container {
     max-width: 1200px;
@@ -126,4 +162,4 @@ footer {
       margin-bottom: 0;
     }
   }
-  
+
