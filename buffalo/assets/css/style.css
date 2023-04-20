@@ -1,4 +1,13 @@
 
+#carouselExample img {
+  display: block;
+  margin: auto;
+}
+
+#carouselExample {
+  background-color: #732D2D;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +21,11 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #D9A13B;
+}
+
+h3 a{
+  text-decoration: underline;
 }
 
 h1 {
@@ -22,6 +35,7 @@ h1 {
 h2 {
   font-family: 'Acme', sans-serif;
   color: #732D2D;
+  margin-top: 30px;
 }
 
 h3 {
@@ -37,6 +51,7 @@ h3 {
   background-color: #D9A13B;
   padding: 10px;
   border: none;
+  border-radius: 10%;
 }
 
 .button:hover{
@@ -57,6 +72,7 @@ h3 {
 
 
 .half-image {
+  margin-top: 20px;
   border-radius: 2%;
   margin-left: 5px;
   margin-right: 5px;
@@ -82,6 +98,36 @@ h3 {
   transform: translate(-50%, -50%);
 }
 
+.about-cabin-rentals {
+  text-align: left;
+  width: 70%;
+  margin: 20px;
+  font-size: 1.2rem;
+}
+
+.dropdown-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text-container {
+  display: flex;
+  margin-left: 20px;
+  margin-top: 40px;
+  text-align: left;
+  width: 70%;
+}
+
+.text-container img {
+  margin: 20px;
+  border-radius: 5%;
+}
+
+.centered-text {
+  width: 70%;
+  text-align: center;
+}
+
 .data {
   padding: 50px;
   max-width: 60%;
@@ -90,6 +136,8 @@ h3 {
 
 .navbar-nav > * {
     color: #F2ECD8;
+    font-size: 1.2rem;
+    font-family: 'Acme', sans-serif;
 }
 
 .header-container {
@@ -99,14 +147,30 @@ h3 {
   color: #F2ECD8;
 }
 
+.bear-ridge-images-container {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+}
+
+.vertical-column {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  padding: 10px;
+}
+
 .responsive {
   width: 100%;
 }
+
+
 
 footer {
     background-color: #3A5939;
     color: #fff;
     padding: 40px 0;
+    margin-top: 30px;
   }
   
   footer h3 {
@@ -155,11 +219,11 @@ footer {
   }
 
 
-  
   @media (min-width: 768px) {
     .col-md-4 {
       width: 25%;
       margin-bottom: 0;
     }
-  }
 
+    
+  }
