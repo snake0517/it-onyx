@@ -211,19 +211,18 @@ footer ul li a:hover {
   flex-wrap: wrap;
 }
 
+
+.col-md-4 {
+  width: 25%;
+  margin-bottom: 0;
+}
+@media (max-width: 768px) {
+ 
 .col-md-4 {
   width: 100%;
   padding: 0 15px;
   margin-bottom: 30px;
 }
-
-
-@media (max-width: 768px) {
-  .col-md-4 {
-    width: 25%;
-    margin-bottom: 0;
-  }
-
   .half-image {
     width: 91%;
     border-radius: 2%;
