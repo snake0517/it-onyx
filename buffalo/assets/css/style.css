@@ -1,3 +1,6 @@
+
+ 
+
 #carouselExample img {
   display: block;
   margin: auto;
@@ -114,12 +117,13 @@ h3 {
   margin-left: 20px;
   margin-top: 40px;
   text-align: left;
-  width: 70%;
+  width: 100%;
 }
 
-.text-container img {
+.about-image {
   margin: 20px;
   border-radius: 5%;
+
 }
 
 .centered-text {
@@ -129,8 +133,7 @@ h3 {
 
 .data {
   padding: 50px;
-  max-width: 60%;
-  min-width: 30%;
+width: 600px;
 }
 
 .navbar-nav>* {
@@ -230,4 +233,22 @@ footer ul li a:hover {
     margin-bottom: 10px;
   }
 
+}
+
+
+
+.canoe-rentals-text {
+  text-align: center;
+}
+
+
+.cabin-rentals-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.booking-data {
+  margin-top: 20px;
+  display: block;
+  margin: auto;
 }
